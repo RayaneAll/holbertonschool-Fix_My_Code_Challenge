@@ -39,7 +39,7 @@ int main(void)
 	print_dlistint(head);
 	printf("-----------------\n");
 
-	for (i = 0; i < 8; i++)
+	for (i = 0; i < 7; i++)  /* Changed from 8 to 7 */
 		print_and_delete(&head);
 
 	print_dlistint(head);

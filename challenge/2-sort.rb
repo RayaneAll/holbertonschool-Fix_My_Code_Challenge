@@ -20,11 +20,7 @@ ARGV.each do |arg|
         if result[i] < i_arg
             i += 1
         else
-            if i == 0
-                result.insert(-1, i_arg) # Explicitly use -1 for insertion at the beginning
-            else
-                result.insert(i, i_arg)
-            end
+            result.insert(i, i_arg)
             is_inserted = true
             break
         end

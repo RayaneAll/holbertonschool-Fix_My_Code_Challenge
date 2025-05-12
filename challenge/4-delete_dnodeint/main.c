@@ -4,17 +4,6 @@
 #include "lists.h"
 
 /**
- * print_and_delete - Helper function to delete and print the list.
- * @head: A pointer to the head of the list.
- */
-void print_and_delete(dlistint_t **head)
-{
-	print_dlistint(*head);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(head, 0);
-}
-
-/**
  * main - check the code for Holberton School students.
  *
  * Return: Always EXIT_SUCCESS.
@@ -22,7 +11,6 @@ void print_and_delete(dlistint_t **head)
 int main(void)
 {
 	dlistint_t *head;
-	int i;
 
 	head = NULL;
 	add_dnodeint_end(&head, 0);
@@ -38,10 +26,43 @@ int main(void)
 	delete_dnodeint_at_index(&head, 5);
 	print_dlistint(head);
 	printf("-----------------\n");
-
-	for (i = 0; i < 7; i++)  /* Changed from 8 to 7 */
-		print_and_delete(&head);
-
+	delete_dnodeint_at_index(&head, 0);
+	print_dlistint(head);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	print_dlistint(head);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	print_dlistint(head);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	print_dlistint(head);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	print_dlistint(head);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	print_dlistint(head);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(&head, 0);
 	print_dlistint(head);
 	free_dlistint(head);
 	return (0);

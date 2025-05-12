@@ -4,6 +4,17 @@
 #include "lists.h"
 
 /**
+ * print_and_delete - Helper function to delete and print the list.
+ * @head: A pointer to the head of the list.
+ */
+void print_and_delete(dlistint_t **head)
+{
+	print_dlistint(*head);
+	printf("-----------------\n");
+	delete_dnodeint_at_index(head, 0);
+}
+
+/**
  * main - check the code for Holberton School students.
  *
  * Return: Always EXIT_SUCCESS.
@@ -11,6 +22,7 @@
 int main(void)
 {
 	dlistint_t *head;
+	int i;
 
 	head = NULL;
 	add_dnodeint_end(&head, 0);
@@ -26,43 +38,10 @@ int main(void)
 	delete_dnodeint_at_index(&head, 5);
 	print_dlistint(head);
 	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	print_dlistint(head);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	print_dlistint(head);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	print_dlistint(head);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	print_dlistint(head);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	print_dlistint(head);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	print_dlistint(head);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
+
+	for (i = 0; i < 8; i++)
+		print_and_delete(&head);
+
 	print_dlistint(head);
 	free_dlistint(head);
 	return (0);
